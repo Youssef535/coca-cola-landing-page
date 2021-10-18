@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca Cola responsive Landing Page</title>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+    <!-- Render All Element Normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awsome Libary -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Main Template Css File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link To Custom Js -->
+    <scrip src="main.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start landing Page -->
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="img/logo.png" class="logo">
+            </a>
+            <div class="toggle" onclick="toggleMenu() "></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Last Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text-box">
+                <h2>Taste The <span>Feeling</span></h2>
+                <p>On May 8, 1886, Dr. John Pemberton served the world’s first Coca-Cola at Jacobs' Pharmacy in Atlanta, Ga. 
+                    From that one iconic drink, we’ve evolved into a total beverage company.
+                    In 1960, we acquired Minute Maid. That was our first step toward becoming a total beverage company.
+                    We are passionate about beverages around the world, with around 200 brands — from Coca-Cola, to smartwater, to Costa coffee.</p>
+                    <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="img-box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/coca.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/coca2.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/coca3.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/coca4.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/coca5.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/coca6.png">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram (1).png"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop:true,
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    <!--Start Landing Page -->
+</body>
+</html>
