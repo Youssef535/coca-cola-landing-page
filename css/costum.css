@@ -1,0 +1,218 @@
+/* Start Global Rules  */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
+    text-align: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+/* Start Landing Page  */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    color: #fff;
+    background-color: #e51a2e;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+section {
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    padding:100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#161616;
+}
+section .circle {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: #e51a2e;
+    clip-path: circle(70% at right -20%);
+}
+header {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+header .navigation {
+    position:relative;
+    display: flex;
+}
+header .navigation li a {
+    display: inline-block;
+    color:#fff;
+    font-weight: 500;
+    margin-left:40px;
+    transition:0.3s;
+}
+header .navigation li a:hover {
+    color: #333;
+}
+.content {
+    position:relative;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .text-box {
+    position: relative;
+    max-width:600px;
+    margin-right: 20px;
+}
+.content .text-box h2 {
+    color: whitesmoke;
+    font-size:3em;
+    margin-bottom: 10px;
+    line-height:1.5em;
+    font-weight: 700;
+}
+.content .text-box p {
+    color:#fff;
+    line-height: 1.5em;
+}
+.social {
+    position:absolute;
+    bottom: 40px;
+    left:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social li a {
+    display: inline-block;
+    margin-left:15px;
+    background: #222;
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    transition: 0.2s ease-in-out;
+}
+.social li a:hover {
+    background: #e51a2e;
+    transform: translateY(-10px);
+}
+.social li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+/***** Slider with java script ******/
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height:100%;
+}
+.content .img-box {
+    width:500px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.content .img-box img {
+    max-width:150px;
+}
+.swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
+    background-image: none;
+}
+@media (max-width: 991px) {
+    header {
+        padding:40px;
+    }
+    section {
+        padding:140px 40px;
+    }
+    .social {
+        left:75px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content .text-box,
+    .content .img-box {
+        max-width:100%;
+    }
+    .swiper-slide {
+        height: 300px;
+    }
+    header .navigation {
+        display: none;
+    }
+    header .navigation.active {
+        position: fixed;
+        top: 0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:#e51a2e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    header .navigation li a {
+        margin:10px 0;
+        font-size:1.5em;
+        font-weight: 300;
+}
+    .toggle {
+        position: relative;
+        width:30px;
+        height: 30px;
+        background: url("../img/menu.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+    }
+    .toggle.active {
+        background: url("../img/close.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: invert(1);
+    }
+}
+
