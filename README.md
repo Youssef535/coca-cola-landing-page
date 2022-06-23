@@ -1,2 +1,2 @@
 # coca-cola-landing-page
-hello guys this is a fully responsive landing page use it and change the content 
+### A fully responsive landing page using HTML5, CSS3, Slider 
